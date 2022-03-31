@@ -26,22 +26,55 @@ TODO: Un diagrama con nodos (vistas) y aristas (transiciones) usando [mermaid](h
 
 TODO: Screenshot for each of the nodes linked here.
 
+**Leyenda**:
+  * M: Manage section
+  * S: Settings section
+  * SF: Site Front
+
 ```mermaid
 flowchart LR;
     %% Definition of views
 
+    %% Login
+    LOG[Login Form]
+
+    %% Front End
+    SF[Site Front]
+    SFH[SF: Home]
+    SFT[SF: Tag]
+    SFA[SF: Author]
+    SFHE[SF: Help]
+
+    %% Admin Dashboard
     DA[Admin Dashboard];
-    POL[Post List];
-    PAL[Pages List];
-    TAL[Tags List];
-    MEL[Members List];
-    STL[Staff List];
-    SG[Settings General]
-    SD[Settings Design]
-    SC[Settings Code injection]
-    SI[Settings Integrations]
-    SL[Settings Labs]
-    POE[Content Editor]
+
+    %% Manage Section
+    POL[M: Post List];
+    PAL[M: Pages List];
+    TAL[M: Tags List];
+    MEL[M: Members List];
+    STL[M: Staff List];
+
+    %%%% Manage internal views
+    POE[M: Content Editor]
+    POES[M: Content Settings]
+    STE[M: Staff Editor]
+    MEE[M: Member Editor]
+    TAE[M: Tags Settings]
+
+    %% Settings Section
+    SG[S: General]
+    SD[S: Design]
+    SC[S: Code injection]
+    SI[S: Integrations]
+    SL[S: Labs]
+
+    %%%% Settings internal views
+    SIIV[S: Integrations Settings Individual View]
+
+    %% Links Admin Dashboard
+
+    LOG-->DA
     DA<-->POL
     DA<-->PAL
     DA<-->TAL
@@ -54,16 +87,13 @@ flowchart LR;
     DA<-->SL
     POL<-->POE
     PAL<-->POE
-    TAE[Tags Settings]
+    POE<-->POES
+    STL<-->STE
     TAL<-->TAE
+    MEL<-->MEE
+    SI<-->SIIV
 
-    %% This is the model for the front end
-
-    SF[Site Front]
-    SFH[Site Front Home]
-    SFT[Site Front Tag]
-    SFA[Site Front Author]
-    SFHE[Site Front Help]
+    %% Links Front End
     DA<--->SF
     SF<--->SFH
     SF<--->SFT
