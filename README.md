@@ -8,6 +8,10 @@ En el siguiente documento realizamos un proceso de pruebas explorativas a la apl
 
 La instalación se realizó [utilizando Docker](https://github.com/muniter/TSDC_GHOST/blob/master/build/docker-compose.yaml) usando la imágen publicada en DockerHub.
 
+## Listado de funcionalidades
+
+TODO: Listado de funcionalidades
+
 ## Registro de defectos
 
 Se utilizó un [repositorio de Github](https://github.com/muniter/TSDC_GHOST/issues) para esta tarea. Donde se encontraron múltiples defectos:
@@ -19,6 +23,8 @@ En este se encuentran cada una de las pruebas con un mismo formato, donde se exp
 ## Inventario de Pruebas
 
 TODO: Cada uno de los issues presentados es una prueba, además de estas necesitamos **pruebas positivas** donde todo salga bien.
+
+TODO: Se debe llenar el formato excel entregado, quizás podríamos hacer una tabla en Markdown con la info:
 
 ## Modelo de GUI
 
@@ -100,3 +106,5 @@ flowchart LR;
     SF<--->SFA
     SF<--->SFHE
 ```
+
+## Modelo de dominio
