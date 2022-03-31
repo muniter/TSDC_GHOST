@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+
+  ghost:
+    image: ghost:3.41.1
+    restart: always
+    ports:
+      - 8080:2368
+    environment:
+      url: http://localhost:8080
