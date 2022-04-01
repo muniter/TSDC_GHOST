@@ -8,6 +8,33 @@ En el siguiente documento realizamos un proceso de pruebas explorativas a la apl
 
 La instalación se realizó [utilizando Docker](https://github.com/muniter/TSDC_GHOST/blob/master/build/docker-compose.yaml) usando la imágen publicada en DockerHub.
 
+Ghost ha sido codificado en Javascript a través del entorno de ejecucion nodeJS, para la persistencia usa SQLite y para los estilos CSS. Muestra una arquitectura MVC. La disposición del directorio es la siguiente:
+
+/content
+    /...
+    /data
+    ...
+/core
+    /frontend
+        /apps
+        /services
+        /views
+        /web
+        ...
+    /server
+        /api
+        /data
+        /models
+        ghost-server.js
+        ...
+    /shared
+    app.js
+/test
+   /integration
+   /regression
+   /unit
+   
+
 ## Listado de funcionalidades
 
 TODO: Listado de funcionalidades
