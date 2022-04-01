@@ -1,39 +1,42 @@
-# Proyecto Pruebas automatizadas
+## Proyecto Pruebas automatizadas
 
-**This is an educational assignment**
-
-En el siguiente documento realizamos un proceso de pruebas explorativas a la aplicación [Ghost](https://github.com/TryGhost/Ghost) en su versión **3.41.1**.
+Integrantes:
+  - Hector Tenezaca
+  - Javier López
 
 ## Aspectos generales
+
+En el siguiente documento realizamos un proceso de pruebas explorativas a la aplicación [Ghost](https://github.com/TryGhost/Ghost) en su versión **3.41.1**.
 
 La instalación se realizó [utilizando Docker](https://github.com/muniter/TSDC_GHOST/blob/master/build/docker-compose.yaml) usando la imágen publicada en DockerHub.
 
 Ghost ha sido codificado en Javascript a trabaja través del entorno de ejecucion nodeJS, para la persistencia usa SQLite y para los estilos CSS. Muestra una arquitectura MVC. La disposición del directorio es la siguiente:
 
-* /content
-    * /...
-    * /data
-    * ...
-* /core
-    * /frontend
-        * /apps
-        * /services
-        * /views
-        * /web
-        * ...
-    * /server
-        * /api
-        * /data
-        * /models
-        * ghost-server.js
-        * ...
-    * /shared
-    * app.js
-* /test
-   * /integration
-   * /regression
-   * /unit
-   * ...
+```
+ /content
+     /...
+     /data
+     ...
+ /core
+     /frontend
+         /apps
+         /services
+         /views
+         /web
+         ...
+     /server
+         /api
+         /data
+         /models
+         ghost-server.js
+         ...
+     /shared
+     app.js
+ /test
+    /integration
+    /regression
+    /unit
+```
 
 ## Listado de funcionalidades
 
@@ -53,6 +56,12 @@ Ghost ha sido codificado en Javascript a trabaja través del entorno de ejecucio
 14. Editar un staff
 15. Eliminar un staff
 
+<div style="page-break-after: always"></div>
+
+## Inventario de Pruebas
+
+Se realizaron en total 44 pruebas explorativas, que se pueden encontrar [en el formato suministrado](https://docs.google.com/spreadsheets/d/1PjMKYqfaZKyQ-eG3yl1oze4ZOU-kfDWR2E8D86GBfUk/edit?usp=sharing). Esta información también se encuenta como **Anexo 1** al final de este documento.
+
 ## Registro de defectos
 
 Se utilizó un [repositorio de Github](https://github.com/muniter/TSDC_GHOST/issues) para esta tarea. Donde se encontraron múltiples defectos:
@@ -61,118 +70,51 @@ Link para sistema de registro de incidencias: [Link](https://github.com/muniter/
 
 En este se encuentran cada una de las pruebas con un mismo formato, donde se explican el comportamiento actual, el comportamiento esperado, los pasos para reproducir, un video que demuestra el error, y la descripción del ambiente de ejecución.
 
-## Inventario de Pruebas
+Las pruebas para estos defectos también se encuentran en el formato de pruebas explorativas.
 
-TODO: Cada uno de los issues presentados es una prueba, además de estas necesitamos **pruebas positivas** donde todo salga bien.
-
-TODO: Se debe llenar el formato excel entregado, quizás podríamos hacer una tabla en Markdown con la info:
+<div style="page-break-after: always"></div>
 
 ## Modelo de GUI
-
-TODO: Un diagrama con nodos (vistas) y aristas (transiciones) usando [mermaid](https://mermaid-js.github.io/mermaid/#/flowchart?id=node-shapes)
-
-TODO: Screenshot for each of the nodes linked here.
 
 **Leyenda**:
   * M: Manage section
   * S: Settings section
   * SF: Site Front
 
-```mermaid
-flowchart LR;
-    %% Definition of views
+![diagram](./assets/diagram.svg)
 
-    %% Login
-    LOG[Login Form]
-
-    %% Front End
-    SF[Site Front]
-    SFH[SF: Home]
-    SFT[SF: Tag]
-    SFA[SF: Author]
-
-    %% Admin Dashboard
-    DA[Admin Dashboard];
-
-    %% Manage Section
-    POL[M: Post List];
-    PAL[M: Pages List];
-    TAL[M: Tags List];
-    MEL[M: Members List];
-    STL[M: Staff List];
-
-    %%%% Manage internal views
-    POE[M: Content Editor]
-    POES[M: Content Settings]
-    STE[M: Staff Editor]
-    MEE[M: Member Editor]
-    TAE[M: Tags Settings]
-
-    %% Settings Section
-    SG[S: General]
-    SD[S: Design]
-    SC[S: Code injection]
-    SI[S: Integrations]
-    SL[S: Labs]
-
-    %%%% Settings internal views
-    SIIV[S: Integrations Settings Individual View]
-
-    %% Links Admin Dashboard
-
-    LOG-->DA
-    DA<-->POL
-    DA<-->PAL
-    DA<-->TAL
-    DA<-->MEL
-    DA<-->STL
-    DA<-->SG
-    DA<-->SD
-    DA<-->SC
-    DA<-->SI
-    DA<-->SL
-    POL<-->POE
-    PAL<-->POE
-    POE<-->POES
-    STL<-->STE
-    TAL<-->TAE
-    MEL<-->MEE
-    SI<-->SIIV
-
-    %% Links Front End
-    DA<--->SF
-    SF<--->SFH
-    SF<--->SFT
-    SF<--->SFA
-```
+<div style="page-break-after: always"></div>
 
 ### Imágenes de los nodos
 
-1. [Login Form](.%2Fassets%2FLogin%20Form.png)
-1. [Site Front](.%2Fassets%2FSite%20Front.png)
-1. [SF: Home](.%2Fassets%2FSF%3A%20Home.png)
-1. [SF: Tag](.%2Fassets%2FSF%3A%20Tag.png)
-1. [SF: Author](.%2Fassets%2FSF%3A%20Author.png)
-1. [Admin Dashboard](.%2Fassets%2FAdmin%20Dashboard.png)
-1. [M: Post List](.%2Fassets%2FM%3A%20Post%20List.png)
-1. [M: Pages List](.%2Fassets%2FM%3A%20Pages%20List.png)
-1. [M: Tags List](.%2Fassets%2FM%3A%20Tags%20List.png)
-1. [M: Members List](.%2Fassets%2FM%3A%20Members%20List.png)
-1. [M: Staff List](.%2Fassets%2FM%3A%20Staff%20List.png)
-1. [M: Content Editor](.%2Fassets%2FM%3A%20Content%20Editor.png)
-1. [M: Content Settings](.%2Fassets%2FM%3A%20Content%20Settings.png)
-1. [M: Staff Editor](.%2Fassets%2FM%3A%20Staff%20Editor.png)
-1. [M: Member Editor](.%2Fassets%2FM%3A%20Member%20Editor.png)
-1. [M: Tags Settings](.%2Fassets%2FM%3A%20Tags%20Settings.png)
-1. [S: General](.%2Fassets%2FS%3A%20General.png)
-1. [S: Design](.%2Fassets%2FS%3A%20Design.png)
-1. [S: Code injection](.%2Fassets%2FS%3A%20Code%20injection.png)
-1. [S: Integrations](.%2Fassets%2FS%3A%20Integrations.png)
-1. [S: Labs](.%2Fassets%2FS%3A%20Labs.png)
-1. [S: Integrations Settings Individual View](.%2Fassets%2FS%3A%20Integrations%20Settings%20Individual%20View.png)
+1. [Login Form](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FLogin%20Form.png)
+1. [Site Front](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FSite%20Front.png)
+1. [SF: Home](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FSF%3A%20Home.png)
+1. [SF: Tag](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FSF%3A%20Tag.png)
+1. [SF: Author](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FSF%3A%20Author.png)
+1. [Admin Dashboard](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FAdmin%20Dashboard.png)
+1. [M: Post List](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FM%3A%20Post%20List.png)
+1. [M: Pages List](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FM%3A%20Pages%20List.png)
+1. [M: Tags List](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FM%3A%20Tags%20List.png)
+1. [M: Members List](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FM%3A%20Members%20List.png)
+1. [M: Staff List](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FM%3A%20Staff%20List.png)
+1. [M: Content Editor](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FM%3A%20Content%20Editor.png)
+1. [M: Content Settings](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FM%3A%20Content%20Settings.png)
+1. [M: Staff Editor](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FM%3A%20Staff%20Editor.png)
+1. [M: Member Editor](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FM%3A%20Member%20Editor.png)
+1. [M: Tags Settings](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FM%3A%20Tags%20Settings.png)
+1. [S: General](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FS%3A%20General.png)
+1. [S: Design](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FS%3A%20Design.png)
+1. [S: Code injection](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FS%3A%20Code%20injection.png)
+1. [S: Integrations](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FS%3A%20Integrations.png)
+1. [S: Labs](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FS%3A%20Labs.png)
+1. [S: Integrations Settings Individual View](https://github.com/muniter/TSDC_GHOST/blob/master/assets%2FS%3A%20Integrations%20Settings%20Individual%20View.png)
+
+<div style="page-break-after: always"></div>
 
 ## Modelo de dominio
-TODO: Un diagrama UML (tipos de datos, entidades) usando [GenMyModel](https://app.genmymodel.com/api/dictionary/projects/_w-AGELHSEeyVi7WGkDHboQ)
+
+### Glosario
 
 | Nombre                                                                                                           | Tipo        | Descripción                                                  |
 | ---------------------------------------------------------------------------------------------------------------- | ----------- | ------------------------------------------------------------ |
@@ -186,5 +128,18 @@ TODO: Un diagrama UML (tipos de datos, entidades) usando [GenMyModel](https://ap
 | [User](https://app.genmymodel.com/api/dictionary/projects/_w-AGELHSEeyVi7WGkDHboQ/_ycUncZQAEDqrStFtVYmCyw)       | Class       | Usuario que puede tener diferentes roles                     |
 | [Visibility](https://app.genmymodel.com/api/dictionary/projects/_w-AGELHSEeyVi7WGkDHboQ/_ycUAYZQAEDqrStFtVYmCyw) | Enumeration |
 
+<div style="page-break-after: always"></div>
+
+### Diagrama de clases
+
+Módelo informativo del sistema.
+
 ![class-diagram](https://user-images.githubusercontent.com/98656582/161302247-a96ff079-8aca-4526-b1f5-3b4680b5ac61.svg)
 
+<div style="page-break-after: always"></div>
+
+## Anexos
+
+*Siguiente página*
+
+1. Formato de pruebas explorativas.
