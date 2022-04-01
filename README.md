@@ -6,9 +6,9 @@ Integrantes:
 
 ## Aspectos generales
 
-En el siguiente documento realizamos un proceso de pruebas explorativas a la aplicación [Ghost](https://github.com/TryGhost/Ghost) en su versión **3.41.1**.
+En el siguiente documento realizamos un proceso de pruebas exploratorias a la aplicación [Ghost](https://github.com/TryGhost/Ghost) en su versión **3.41.1**.
 
-La instalación se realizó [utilizando Docker](https://github.com/muniter/TSDC_GHOST/blob/master/build/docker-compose.yaml) usando la imágen publicada en DockerHub.
+La instalación se realizó [utilizando Docker](https://github.com/muniter/TSDC_GHOST/blob/master/build/docker-compose.yaml) usando la imagen publicada en DockerHub.
 
 Ghost ha sido codificado en Javascript a trabaja través del entorno de ejecución nodeJS, para la persistencia usa SQLite y para los estilos CSS. Muestra una arquitectura MVC. La disposición del directorio es la siguiente:
 
@@ -60,7 +60,7 @@ Ghost ha sido codificado en Javascript a trabaja través del entorno de ejecuci�
 
 ## Inventario de Pruebas
 
-Se realizaron en total 44 pruebas explorativas, que se pueden encontrar [en el formato suministrado](https://docs.google.com/spreadsheets/d/1PjMKYqfaZKyQ-eG3yl1oze4ZOU-kfDWR2E8D86GBfUk/edit?usp=sharing). Esta información también se encuenta como **Anexo 1** al final de este documento.
+Se realizaron en total 44 pruebas exploratorias, que se pueden encontrar [en el formato suministrado](https://docs.google.com/spreadsheets/d/1PjMKYqfaZKyQ-eG3yl1oze4ZOU-kfDWR2E8D86GBfUk/edit?usp=sharing). Esta información también se encuentra como **Anexo 1** al final de este documento.
 
 ## Registro de defectos
 
@@ -70,7 +70,7 @@ Link para sistema de registro de incidencias: [Link](https://github.com/muniter/
 
 En este se encuentran cada una de las pruebas con un mismo formato, donde se explican el comportamiento actual, el comportamiento esperado, los pasos para reproducir, un video que demuestra el error, y la descripción del ambiente de ejecución.
 
-Las pruebas para estos defectos también se encuentran en el formato de pruebas explorativas.
+Las pruebas para estos defectos también se encuentran en el formato de pruebas exploratorias.
 
 <div style="page-break-after: always"></div>
 
@@ -142,4 +142,4 @@ Módelo informativo del sistema.
 
 *Siguiente página*
 
-1. Formato de pruebas explorativas.
+1. Formato de pruebas exploratorias.
