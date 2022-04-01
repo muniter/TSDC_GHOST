@@ -10,30 +10,30 @@ La instalación se realizó [utilizando Docker](https://github.com/muniter/TSDC_
 
 Ghost ha sido codificado en Javascript a través del entorno de ejecucion nodeJS, para la persistencia usa SQLite y para los estilos CSS. Muestra una arquitectura MVC. La disposición del directorio es la siguiente:
 
-*/content
-    */...
-    */data
-    *...
-*/core
-    */frontend
-        */apps
-        */services
-        */views
-        */web
-        *...
-    */server
-        */api
-        */data
-        */models
-        *ghost-server.js
-        *...
-    */shared
-    *app.js
-*/test
-   */integration
-   */regression
-   */unit
-   *...
+* /content
+    * /...
+    * /data
+    * ...
+* /core
+    * /frontend
+        * /apps
+        * /services
+        * /views
+        * /web
+        * ...
+    * /server
+        * /api
+        * /data
+        * /models
+        * ghost-server.js
+        * ...
+    * /shared
+    * app.js
+* /test
+   * /integration
+   * /regression
+   * /unit
+   * ...
 
 ## Listado de funcionalidades
 
