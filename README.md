@@ -90,7 +90,6 @@ flowchart LR;
     SFH[SF: Home]
     SFT[SF: Tag]
     SFA[SF: Author]
-    SFHE[SF: Help]
 
     %% Admin Dashboard
     DA[Admin Dashboard];
@@ -145,8 +144,32 @@ flowchart LR;
     SF<--->SFH
     SF<--->SFT
     SF<--->SFA
-    SF<--->SFHE
 ```
+
+### Imágenes de los nodos
+
+1. [Login Form](.%2Fassets%2FLogin%20Form.png)
+1. [Site Front](.%2Fassets%2FSite%20Front.png)
+1. [SF: Home](.%2Fassets%2FSF%3A%20Home.png)
+1. [SF: Tag](.%2Fassets%2FSF%3A%20Tag.png)
+1. [SF: Author](.%2Fassets%2FSF%3A%20Author.png)
+1. [Admin Dashboard](.%2Fassets%2FAdmin%20Dashboard.png)
+1. [M: Post List](.%2Fassets%2FM%3A%20Post%20List.png)
+1. [M: Pages List](.%2Fassets%2FM%3A%20Pages%20List.png)
+1. [M: Tags List](.%2Fassets%2FM%3A%20Tags%20List.png)
+1. [M: Members List](.%2Fassets%2FM%3A%20Members%20List.png)
+1. [M: Staff List](.%2Fassets%2FM%3A%20Staff%20List.png)
+1. [M: Content Editor](.%2Fassets%2FM%3A%20Content%20Editor.png)
+1. [M: Content Settings](.%2Fassets%2FM%3A%20Content%20Settings.png)
+1. [M: Staff Editor](.%2Fassets%2FM%3A%20Staff%20Editor.png)
+1. [M: Member Editor](.%2Fassets%2FM%3A%20Member%20Editor.png)
+1. [M: Tags Settings](.%2Fassets%2FM%3A%20Tags%20Settings.png)
+1. [S: General](.%2Fassets%2FS%3A%20General.png)
+1. [S: Design](.%2Fassets%2FS%3A%20Design.png)
+1. [S: Code injection](.%2Fassets%2FS%3A%20Code%20injection.png)
+1. [S: Integrations](.%2Fassets%2FS%3A%20Integrations.png)
+1. [S: Labs](.%2Fassets%2FS%3A%20Labs.png)
+1. [S: Integrations Settings Individual View](.%2Fassets%2FS%3A%20Integrations%20Settings%20Individual%20View.png)
 
 ## Modelo de dominio
 TODO: Un diagrama UML (tipos de datos, entidades) usando [GenMyModel](https://app.genmymodel.com/api/dictionary/projects/_w-AGELHSEeyVi7WGkDHboQ)
