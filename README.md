@@ -10,7 +10,7 @@ En el siguiente documento realizamos un proceso de pruebas explorativas a la apl
 
 La instalación se realizó [utilizando Docker](https://github.com/muniter/TSDC_GHOST/blob/master/build/docker-compose.yaml) usando la imágen publicada en DockerHub.
 
-Ghost ha sido codificado en Javascript a trabaja través del entorno de ejecucion nodeJS, para la persistencia usa SQLite y para los estilos CSS. Muestra una arquitectura MVC. La disposición del directorio es la siguiente:
+Ghost ha sido codificado en Javascript a trabaja través del entorno de ejecución nodeJS, para la persistencia usa SQLite y para los estilos CSS. Muestra una arquitectura MVC. La disposición del directorio es la siguiente:
 
 ```
  /content
@@ -40,21 +40,21 @@ Ghost ha sido codificado en Javascript a trabaja través del entorno de ejecucio
 
 ## Listado de funcionalidades
 
-1. Crear una publicación
-2. Editar una publicación
-3. Eliminar una publicación
-4. Crear una página
-5. Editar una página
-6. Eliminar una página
-7. Crear una tag
-8. Editar una tag
-9. Eliminar una tag
-10. Crear un member
-11. Editar un member
-12. Eliminar un member
-13. Crear un staff
-14. Editar un staff
-15. Eliminar un staff
+1. Crear una publicación: Se puede crear una publicación, esta es la unidad mínima de contenido de Ghost, en esta se puede escribir texto en formato markdown, agregar imágenes y demás.
+2. Editar una publicación: Se puede editar todos los detalles de una publicación ya creada.
+3. Eliminar una publicación: Se puede eliminar una publicación ya creada.
+4. Crear una página: Se puede crear una página con menos funcionalidades a un post, pues esta página no tendrá autor, tags, etc.
+5. Editar una página: Se puede editar todos los detalles de una página ya creada.
+6. Eliminar una página: Se puede eliminar una publicación ya creada.
+7. Crear una tag: Se puede crear un tag, este es un elemento de organización bajo agrupación, se provee un nombre, descripción y post asociados.
+8. Editar una tag: Se puede editar todos los datos de un tag ya creado.
+9. Eliminar una tag: Se puede eliminar un tag ya creado.
+10. Crear un member: Se crean los miembros de la página, aquellos que están suscritos a su contenido, se provee un nombre, correo y labels.
+11. Editar un member: Se puede editar todos los datos de un member ya creado.
+12. Eliminar un member: Se puede eliminar un member ya creado.
+13. Crear un staff: Se crean los staff de la página, aquellos que escriben contenido en la página, se provee un nombre, correo, password, etc.
+14. Editar un staff: Se puede editar todos los datos de un staff ya creado.
+15. Eliminar un staff: Se puede eliminar todos los datos de un staff ya creado.
 
 <div style="page-break-after: always"></div>
 
