@@ -37,7 +37,21 @@ Ghost ha sido codificado en Javascript a trabaja través del entorno de ejecucio
 
 ## Listado de funcionalidades
 
-TODO: Listado de funcionalidades
+1. Crear una publicación
+2. Editar una publicación
+3. Eliminar una publicación
+4. Crear una página
+5. Editar una página
+6. Eliminar una página
+7. Crear una tag
+8. Editar una tag
+9. Eliminar una tag
+10. Crear un member
+11. Editar un member
+12. Eliminar un member
+13. Crear un staff
+14. Editar un staff
+15. Eliminar un staff
 
 ## Registro de defectos
 
